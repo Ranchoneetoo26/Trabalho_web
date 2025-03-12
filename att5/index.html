@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-br"></html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Fale Conosco</title>
+  </head>
+  <body>
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-info__item">
+          <h1>Entre em Contato</h1>
+          <p>Adoraríamos ouvir de você. Envie-nos uma mensagem!</p>
+        </div>
+        <div class="contact-info__image">
+          <img src="./images/guys.webp" alt="Um homem e uma mulher de ternos sorrindo, o homem faz um sinal de positivo com a mão." />
+        </div>
+      </div>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Nome Completo</label>
+          <input type="text" id="name" placeholder="João Silva" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="joao@exemplo.com" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Assunto</label>
+          <input type="text" id="subject" placeholder="Como podemos ajudar?" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensagem</label>
+          <textarea id="message" rows="5" placeholder="Sua mensagem aqui..." required></textarea>
+        </div>
+        <button type="submit">Enviar Mensagem</button>
+      </form>
+    </div>
+  </body>
+</html>
