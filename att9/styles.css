@@ -10,10 +10,33 @@ body {
   height: 100vh;
   flex-direction: column;
   font-family: sans-serif;
-  background-color: #3335;
+  background: linear-gradient(135deg, #080a29, #010125);
+}
 
+h2 {
+  color: white;
+  margin-top: 10vh;
+  font-size: 40px;
 }
 
 ul {
   list-style: none;
+  color: white;
+  font-size: 20px;
+  border-inline-end-color: white;
+  margin-top: 20vh;
+}
+
+button {
+  background: rgb(68, 2, 68);
+  font-size: 18px;
+  color: white;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-align: center;
+
+
+
 }
