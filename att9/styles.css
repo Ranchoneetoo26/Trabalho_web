@@ -10,33 +10,51 @@ body {
   height: 100vh;
   flex-direction: column;
   font-family: sans-serif;
-  background: linear-gradient(135deg, #080a29, #010125);
+  background: linear-gradient(135deg, #87CEFA, #1E90FF);
 }
 
 h2 {
-  color: white;
+
   margin-top: 10vh;
   font-size: 40px;
+  color: #FFF8DC;
+  text-shadow: 2px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  text-decoration: underline;
 }
 
 ul {
   list-style: none;
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   border-inline-end-color: white;
-  margin-top: 20vh;
+  margin-top: 10vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.tarefas input[type="checkbox"]:checked+label {
+  text-decoration: line-through;
+  color: #333;
 }
 
 button {
-  background: rgb(68, 2, 68);
-  font-size: 18px;
   color: white;
-  border-radius: 0.6rem;
+  background: #333;
+  padding: 10px 15px;
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 0.5rem;
   cursor: pointer;
-  padding: 10px 20px;
-  margin-top: 20px;
-  text-align: center;
+}
 
-
-
+button:hover {
+  background: #A9A9A9;
+  color: black;
 }
