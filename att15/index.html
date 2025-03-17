@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Lançamento do Produto</title>
+</head>
+<body>
+  <main class="launch-container">
+    <div class="product-showcase">
+      <div class="image-slider">
+        <img src="./images/img1.webp" alt="Imagem do Produto 1" class="product-image">
+        <img src="./images/img2.webp" alt="Imagem do Produto 2" class="product-image">
+        <img src="./images/img3.webp" alt="Imagem do Produto 3" class="product-image">
+      </div>
+      <div class="overlay"></div>
+      <div class="countdown-container">
+        <h2 class="countdown-title">Em Breve</h2>
+        <time class="countdown" datetime="2023-12-31T02:23:59">
+          <span class="countdown-digit countdown-hours-tens"></span>
+          <span class="countdown-digit countdown-hours-ones"></span>
+          <span class="countdown-separator">:</span>
+          <span class="countdown-digit countdown-minutes-tens"></span>
+          <span class="countdown-digit countdown-minutes-ones"></span>
+          <span class="countdown-separator">:</span>
+          <span class="countdown-digit countdown-seconds-tens"></span>
+          <span class="countdown-digit countdown-seconds-ones"></span>
+      </time>
+      </div>
+    </div>
+    <div class="form-container">
+      <h1 class="form-title">NOVO FUTURO TS</h1>
+      <p class="form-subtitle">Seja o primeiro a obter o novo TSmart Watch. Aproveite e <b>Think Smart</b>!</p>
+      <details class="features-list">
+        <summary>Características do Produto</summary>
+        <ul>
+          <li>&check; . Monitoramento de Frequência Cardíaca.</li>
+          <li>&check; . GPS Integrado........................</li>
+          <li>&check; . Resistência à Água...................</li>
+          <li>&check; . Notificações de Smartphone...........</li>
+          <li>&check; . Monitoramento de Sono................</li>
+          <li>&check; . Controle de Música...................</li>
+          <li>&check; . Pagamentos por NFC...................</li>
+          <li>&check; . Assistente de Voz....................</li>
+          <li>&check; . Monitoramento de Atividades Físicas..</li>
+          <li>&check; . Alertas de Sedentarismo..............</li>
+        </ul>
+      </details>
+      <form class="pre-sale-form">
+        <div class="form-group">
+          <label for="name">Nome Completo</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Endereço de Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Número de Telefone</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        
+        <button type="submit">Pré-Encomendar Agora</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  font-family: 'Inter', sans-serif;
+}
+
+.launch-container {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  height: 600px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-showcase {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+}
+
+.image-slider {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.product-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  
+}
+
+.product-image:nth-child(1) { 
+  animation: fade-1 10s infinite;
+ }
+.product-image:nth-child(2) { 
+  animation: fade-2 10s infinite;
+ }
+.product-image:nth-child(3) { 
+  animation: fade-3 10s infinite;
+ }
+
+@keyframes fade-1 {
+  0% { opacity: 1; }
+  33% { opacity: 0; }
+  66% { opacity: 0; }
+  100% { opacity: 1; }
+ }
+ @keyframes fade-2 {
+  0% { opacity: 0; }
+  33% { opacity: 1; }
+  66% { opacity: 0; }
+  100% { opacity: 0; }
+ }
+ @keyframes fade-3 {
+  0% { opacity: 0; }
+  33% { opacity: 0; }
+  66% { opacity: 1; }
+  100% { opacity: 0; }
+ }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.countdown-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.countdown-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.countdown {
+  font-size: 3rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulse 2s infinite;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.countdown-digit {
+  width: 0.6em;
+  text-align: center;
+  overflow: hidden;
+}
+
+.countdown-separator {
+  margin: 0 0.1em;
+}
+
+.countdown-hours-tens {
+  position: relative;
+}
+
+.countdown-hours-tens::before {
+  content: "0";
+}
+
+.countdown-hours-ones {
+  position: relative;
+}
+
+.countdown-hours-ones::before {
+  content: "";
+  animation: hoursOnes 8640s infinite;
+}
+
+@keyframes hoursOnes {
+  0%, 33.329% { content: "2"; }
+  33.33%, 66.669% { content: "1"; }
+  66.67%, 99.999% { content: "0"; }
+  100% { content: "2"; }
+}
+
+.countdown-minutes-tens {
+  position: relative;
+}
+
+.countdown-minutes-tens::before {
+  content: "";
+  animation: minutesTens 3600s infinite;
+}
+
+@keyframes minutesTens {
+  0%, 16.669% { content: "5"; }
+  16.67%, 33.329% { content: "4"; }
+  33.33%, 49.999% { content: "3"; }
+  50%, 66.669% { content: "2"; }
+  66.67%, 83.329% { content: "1"; }
+  83.33%, 99.999% { content: "0"; }
+  100% { content: "5"; }
+}
+
+.countdown-minutes-ones {
+  position: relative;
+}
+
+.countdown-minutes-ones::before {
+  content: "";
+  animation: minutesOnes 600s infinite;
+}
+
+@keyframes minutesOnes {
+  0%, 9.99% { content: "9"; }
+  10%, 19.99% { content: "8"; }
+  20%, 29.99% { content: "7"; }
+  30%, 39.99% { content: "6"; }
+  40%, 49.99% { content: "5"; }
+  50%, 59.99% { content: "4"; }
+  60%, 69.99% { content: "3"; }
+  70%, 79.99% { content: "2"; }
+  80%, 89.99% { content: "1"; }
+  90%, 99.99% { content: "0"; }
+  100% { content: "9"; }
+}
+
+.countdown-seconds-tens {
+  position: relative;
+}
+
+.countdown-seconds-tens::before {
+  content: "";
+  animation: secondsTens 60s infinite;
+}
+
+@keyframes secondsTens {
+  0%, 16.669% { content: "5"; }
+  16.67%, 33.329% { content: "4"; }
+  33.33%, 49.999% { content: "3"; }
+  50%, 66.669% { content: "2"; }
+  66.67%, 83.329% { content: "1"; }
+  83.33%, 99.999% { content: "0"; }
+  100% { content: "5"; }
+}
+
+.countdown-seconds-ones {
+  position: relative;
+}
+
+.countdown-seconds-ones::before {
+  content: "";
+  animation: secondsOnes 10s infinite;
+}
+
+@keyframes secondsOnes {
+  0%, 9.99% { content: "9"; }
+  10%, 19.99% { content: "8"; }
+  20%, 29.99% { content: "7"; }
+  30%, 39.99% { content: "6"; }
+  40%, 49.99% { content: "5"; }
+  50%, 59.99% { content: "4"; }
+  60%, 69.99% { content: "3"; }
+  70%, 79.99% { content: "2"; }
+  80%, 89.99% { content: "1"; }
+  90%, 99.99% { content: "0"; }
+  100% { content: "9"; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.form-container {
+  width: 50%;
+  padding: 50px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.form-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.form-subtitle {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.features-list {
+  list-style: none;
+  margin-bottom: 30px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+summary {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.pre-sale-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #222222;
+}
+
+@media (max-width: 768px) {
+  .launch-container {
+      flex-direction: column;
+      height: auto;
+  }
+
+  .product-showcase, .form-container {
+      width: 100%;
+  }
+
+  .product-showcase {
+      height: 400px;
+  }
+
+  .form-container {
+      padding: 30px;
+  }
+}

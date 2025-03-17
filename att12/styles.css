@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #212b2b;
+  height: 100vh;
+}
+
+.container {
+  height: 100vh;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+  height: calc(100vh - 4rem);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.bento-item {
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: white;
+  border: 4px solid #435555;
+  cursor: pointer;
+}
+
+.item-1 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.item-4 {
+  grid-column: span 2;
+}
+
+.item-7 {
+  grid-column: 3 / span 2;
+  grid-row: 3 / span 2;
+}
+
+.bento-item .full {
+  opacity: 0;
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.2s ease-in-out;
+}
+
+.bento-item:active .full {
+  opacity: 1;
+}
+
+figure {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s ease-in-out;
+}
+
+figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+figcaption {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    height: fit-content;
+  }
+  .bento-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 400px);
+      height: fit-content;
+  }
+  
+  .item-1 {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .item-3 {
+    grid-row: span 2;
+  }
+  
+  .item-4 {
+    grid-column: span 1;
+  }
+
+  .item-7 {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+      overflow-y: auto;
+  }
+  
+  .container {
+      height: auto;
+  }
+  
+  .bento-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(9, 30vh);
+      height: auto;
+  }
+
+  .bento-item {
+      grid-column: span 1 !important;
+      grid-row: span 1 !important;
+  }
+}
