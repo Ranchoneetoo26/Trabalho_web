@@ -4,22 +4,39 @@
   box-sizing: border-box;
 }
 
-
 body {
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 100vh;
-  flex-direction: column;
   font-family: sans-serif;
   background: linear-gradient(135deg, #9932CC, #1E90FF);
 }
 
-
-.forms {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+input {
   padding: 10px;
-  gap: 10px;
+  margin: 8px 0;
+  border: 2px solid #9932CC;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #1E90FF;
+}
+
+button {
+  color: white;
+  background: black;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #9932CC;
+  background: rgba(0, 0, 0, 0.5);
 }
