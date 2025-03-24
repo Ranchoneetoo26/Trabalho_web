@@ -14,7 +14,6 @@ body {
 }
 
 h2 {
-
   margin-top: 10vh;
   font-size: 40px;
   color: #FFF8DC;
@@ -22,12 +21,23 @@ h2 {
   text-decoration: underline;
 }
 
+.box {
+  color: white;
+  display: flex;
+  height: auto;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  margin-top: 30px; 
+  width: 280px; 
+}
+
 ul {
   list-style: none;
   color: white;
   font-size: 25px;
   border-inline-end-color: white;
-  margin-top: 10vh;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -53,6 +63,8 @@ button {
   border-radius: 0.5rem;
   cursor: pointer;
   border: none;
+  transition: 0.3s ease-in-out;
+
 }
 
 button:hover {
