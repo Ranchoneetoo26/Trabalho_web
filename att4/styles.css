@@ -1,0 +1,42 @@
+body{
+    background-image: url("images/background.jpg");
+    margin:0;
+    padding: 0;
+    text-align: left;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.Publicacoes{
+    align-items: left;
+    margin: 20px auto;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Post{
+    width: 100%;
+    max-width: 550px;
+    align-items: left;
+    margin-bottom: 20px;
+    border: 1px solid;
+    padding:10px;
+    backdrop-filter: blur(20px);
+}
+
+.Post img{
+    height: 300px;
+    border-radius: 3px;
+    object-fit: cover;
+    width:100%;
+}
+
+.Post a{
+    font-weight: bold;
+}
+
+.Post a:hover{
+    text-decoration: underline;
+}
