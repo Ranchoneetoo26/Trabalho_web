@@ -1,0 +1,44 @@
+body{
+    background-image: url("Images/background1.jpg");
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+}
+
+.Promocoes1{
+    align-items: left;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+}
+
+.Promocoes2{
+    height: 400px;
+    margin:20px;
+    display:flex;
+}
+
+.item{
+    width:400px;
+    align-items: left;
+    margin-bottom: 20px;
+    border: 1px solid;
+    padding: 10px;
+}
+.item img{
+    height:200px;
+    border-radius: 3px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.del{
+    color:red;
+}
+
+.Novo-preço{
+    color:green;
+}
