@@ -5,40 +5,56 @@
 }
 
 body {
-    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
 
-h2 {
-    text-align: center;
-    font-size: 2em;
-    margin: 20px 0;
+.produto {
+    max-width: 400px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-p {
-    text-align: center;
-    font-size: 1.2em;
+.produto img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.produto h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.produto p.descricao {
     margin: 10px 0;
 }
 
-img {
-    max-width: 50vh;
-    display: flex;
-    margin: 20vh auto;
+.produto .preco {
+    font-size: 20px;
+    font-weight: bold;
+    color: #28a745;
+    margin: 15px 0;
 }
 
-.preco {
-    font-size: 1.5em;
-    text-align: center;
-    margin: 20px 0;
-}
-
-button {
+.produto button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
     box-sizing: border-box;
-    display: flex;
-    margin: 0 auto;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    background-color: #333;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.produto button:hover {
+    background-color: #0056b3;
 }
