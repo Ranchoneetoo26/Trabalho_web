@@ -1,0 +1,205 @@
+:root {
+  --cor-primaria: #3a86ff;
+  --cor-secundaria: #8338ec;
+  --cor-destaque: #ff006e;
+  --cor-texto: #2b2d42;
+  --cor-fundo: #f8f9fa;
+  --cor-card: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--cor-fundo) 0%, #e9ecef 100%);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria));
+  border-radius: 2px;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  color: #6c757d;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mapa-container {
+  background-color: var(--cor-card);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mapa-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria));
+}
+
+ul {
+  list-style-type: none;
+}
+
+.arvore-site li {
+  position: relative;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+}
+
+/* Linhas verticais para conexão visual */
+.arvore-site ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  border-left: 2px dashed #ccc;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Linhas horizontais para conexão visual */
+.arvore-site ul li::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 20px;
+  border-top: 2px dashed #ccc;
+}
+
+/* Aplicando text-indent para criar o efeito de árvore */
+.arvore-site ul {
+  position: relative;
+  text-indent: 20px;
+  margin-left: 20px;
+}
+
+.arvore-site ul ul {
+  text-indent: 40px;
+}
+
+.arvore-site ul ul ul {
+  text-indent: 60px;
+}
+
+.categoria {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--cor-secundaria);
+  margin: 20px 0 10px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.categoria:hover {
+  transform: translateX(5px);
+}
+
+.categoria i {
+  margin-right: 10px;
+  color: var(--cor-primaria);
+  font-size: 1.4rem;
+  width: 30px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--cor-texto);
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+a i {
+  margin-right: 10px;
+  color: var(--cor-primaria);
+  font-size: 1rem;
+  width: 20px;
+  text-align: center;
+}
+
+a:hover {
+  background-color: rgba(58, 134, 255, 0.1);
+  color: var(--cor-primaria);
+  transform: translateX(5px);
+}
+
+a:hover i {
+  transform: scale(1.2);
+}
+      
+.pagina-principal {
+  background-color: rgba(58, 134, 255, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.pagina-principal a {
+  font-weight: bold;
+  color: var(--cor-primaria);
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Efeito de brilho no hover dos cards */
+.mapa-container:hover {
+  box-shadow: 0 15px 40px rgba(58, 134, 255, 0.2);
+}
