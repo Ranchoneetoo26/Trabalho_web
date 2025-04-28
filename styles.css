@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #1d1d1f;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #6e6e73;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.activity-card {
+  background: white;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-content {
+  padding: 1.5rem;
+  position: relative;
+}
+
+.activity-number {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #007AFF;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #1d1d1f;
+}
+
+.card-indicator {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  color: #007AFF;
+  transition: transform 0.3s ease;
+}
+
+.activity-card:hover .arrow {
+  transform: translateX(5px);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #6e6e73;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+      padding: 1rem;
+  }
+  
+  h1 {
+      font-size: 2rem;
+  }
+  
+  .activities-grid {
+      grid-template-columns: 1fr;
+  }
+}
